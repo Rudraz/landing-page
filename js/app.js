@@ -71,8 +71,6 @@ const buildnav = () => {
     });
     // append all html elements to the navigation
     navigation.innerHTML = navUI;
-
-
 };
 
 
@@ -97,7 +95,7 @@ const setActiveClass = () => {
  * 
 */
 
-dpcument.addEventListener('scroll', function(){
+document.addEventListener('scroll', function(){
     setActiveClass();
 });
 // Build menu 
