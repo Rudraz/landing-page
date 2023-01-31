@@ -106,7 +106,7 @@ const scrolling = () => {
     }
 }
 
-scrolling();
+
 /**
  * End Main Functions
  * Begin Events
@@ -120,7 +120,7 @@ document.addEventListener('scroll', function(){
 buildnav();
 // Scroll to section on link click
 
-
+scrolling();
 /**  Set sections as active
  * 
 */
