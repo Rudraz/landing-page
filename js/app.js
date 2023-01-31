@@ -65,7 +65,7 @@ const buildnav = {} => {
     navigation.innerHTML = navUI;
 
 
-}
+};
 
 buildnav();
 
