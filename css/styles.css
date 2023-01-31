@@ -10,6 +10,13 @@
 
 
 /* ---- Base Rules ---- */
+
+/* to enable smooth scrolling effect >> https://www.w3schools.com/cssref/pr_scroll-behavior.php*/
+html{
+    scroll-behavior: smooth;
+}
+
+
 body {
     background: rgb(136,203,171);
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);

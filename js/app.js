@@ -37,15 +37,15 @@ const sections = document.querySelectorAll('section');
 /**
  * End Global Variables
  * Start Helper Functions
- * 
+ * use 
 */
-const isInViewport = (elem) => {
-    const bounding = elem.getBoundingClientRect();
+const isInViewport = (element) => {
+    const boundary = element.getBoundingClientRect();
     return (
-        bounding.top >= 0 &&
-        bounding.left >= 0 &&
-        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+        boundary.top >= 0 &&
+        boundary.left >= 0 &&
+        boundary.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        boundary.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 };
 
