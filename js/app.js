@@ -97,7 +97,7 @@ const setActiveClass = () => {
  * 
 */
 
-window.addEventListener('scroll', function(){
+dpcument.addEventListener('scroll', function(){
     setActiveClass();
 });
 // Build menu 
