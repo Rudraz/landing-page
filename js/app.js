@@ -88,7 +88,26 @@ const setActiveClass = () => {
 
 // Scroll to anchor ID using scrollTO event
 
+const scrolling = () => {
+    const links = document.querySelectorAll('.navbar__menu a');
 
+    //scroll smooth on click
+
+    for (link of links) {
+        links.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            const offsetTop = document.querySelector(href).offsetTop;
+            scroll({
+                top: offsetTop,
+                behavior: 'smooth',
+
+            })
+        })       
+    }
+}
+
+scrolling();
 /**
  * End Main Functions
  * Begin Events
