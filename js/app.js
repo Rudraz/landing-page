@@ -49,7 +49,7 @@ const sections = document.querySelectorAll('section');
 */
 
 // build the nav
-const buildnav = {} => {
+const buildnav = () => {
     
     let navUI = '';
     // looping over all sections based on the "querySelectorAll" in the sections global variables above 
