@@ -80,10 +80,10 @@ const buildnav = () => {
 
 const setActiveClass = () => {
     for (let i=0; i < sections.length; i++){
-        if (isInViewport(sectionList[i])){
-            sectionList[i].classList.add("your-active-class");
+        if (isInViewport(sections[i])){
+            sections[i].classList.add("your-active-class");
         }else{
-            sectionList[i].classList.remove("your-active-class");
+            sections[i].classList.remove("your-active-class");
         }
     }
 };
@@ -99,12 +99,12 @@ const setActiveClass = () => {
 
 window.addEventListener('scroll', function(){
     setActiveClass();
-
+}
 // Build menu 
 buildnav();
 // Scroll to section on link click
 
 
-// Set sections as active
-
-
+/**  Set sections as active
+ * 
+*/
