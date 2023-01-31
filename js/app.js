@@ -99,7 +99,7 @@ const setActiveClass = () => {
 
 window.addEventListener('scroll', function(){
     setActiveClass();
-})
+});
 // Build menu 
 buildnav();
 // Scroll to section on link click
