@@ -39,7 +39,15 @@ const sections = document.querySelectorAll('section');
  * Start Helper Functions
  * 
 */
-
+const isInViewport = (elem) => {
+    const bounding = elem.getBoundingClientRect();
+    return (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+};
 
 
 /**
@@ -67,10 +75,18 @@ const buildnav = () => {
 
 };
 
-buildnav();
 
 // Add class 'active' to section when near top of viewport
 
+const setActiveClass = () => {
+    for (let i=0; i < sections.length; i++){
+        if (isInViewport(sectionList[i])){
+            sectionList[i].classList.add("your-active-class");
+        }else{
+            sectionList[i].classList.remove("your-active-class");
+        }
+    }
+};
 
 // Scroll to anchor ID using scrollTO event
 
@@ -81,9 +97,13 @@ buildnav();
  * 
 */
 
-// Build menu 
+window.addEventListener('scroll', function(){
+    setActiveClass();
 
+// Build menu 
+buildnav();
 // Scroll to section on link click
+
 
 // Set sections as active
 
