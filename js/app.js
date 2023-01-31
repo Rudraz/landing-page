@@ -91,7 +91,7 @@ const setActiveClass = () => {
 const scrolling = () => {
     const links = document.querySelectorAll('.navbar__menu a');
 
-    //scroll smooth on click
+    //enable smooth scrolling upon clicking
 
     for (link of links) {
         links.addEventListener('click', function(e) {
@@ -101,7 +101,6 @@ const scrolling = () => {
             scroll({
                 top: offsetTop,
                 behavior: 'smooth',
-
             })
         })       
     }
