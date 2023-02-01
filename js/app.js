@@ -94,7 +94,7 @@ const scrolling = () => {
     //enable smooth scrolling upon clicking
 
     for (link of links) {
-        links.addEventListener('click', function(e) {
+        link.addEventListener('click', function(e) {
             e.preventDefault();
             const href = this.getAttribute('href');
             const offsetTop = document.querySelector(href).offsetTop;
@@ -105,7 +105,6 @@ const scrolling = () => {
         })       
     }
 }
-
 
 /**
  * End Main Functions
