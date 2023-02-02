@@ -88,7 +88,7 @@ const setActiveClass = () => {
 
 // Scroll to anchor ID using scrollTO event
 
-const scrolling = () => {
+/* const scrolling = () => {
     const links = document.querySelectorAll('.navbar__menu a');
 
     //enable smooth scrolling upon clicking
@@ -104,6 +104,21 @@ const scrolling = () => {
             })
         })       
     }
+} */
+
+const scrolling = () => {
+
+	const links = document.querySelectorAll('a');
+
+	links.forEach((link) =>
+		link.addEventListener('click', function(e) {
+			e.preventDefault();
+
+			document.querySelector(this.getAttribute("href")).scrollIntoView({
+				behavior: 'smooth'
+			})
+		})
+	);
 }
 
 /**
